@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres
+    container_name: lgt_container
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: lgt
+
+  adminer:
+    image: adminer
+    container_name: lgt_adminer
+    restart: always
+    ports:
+      - 8080:8080
+
